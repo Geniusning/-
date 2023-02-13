@@ -2,44 +2,7 @@
 import { ref } from 'vue'
 import HelloWorld from './components/HelloWorld.vue'
 
-type IUserInfo  = {
-  name: string
-  age: number
-}
-let useInfo = ref<IUserInfo>({
-  name:'xxx',
-  age:15
-})
 
-let str = ref('hello3')
-let age = ref(10)
-
-let businessArr = ref([
-  [
-    {
-      name: 'liuning',
-      age: age.value
-    }
-  ]
-])
-
-
-  setTimeout(() => {
-    useInfo.value.name = 'gaosui',
-    useInfo.value.age = 15
-    str.value = 'how are you'
-    age.value = 100
-    businessArr.value = [
-  [
-    {
-      name: 'liuning',
-      age: age.value
-    }
-  ]
-]
-    console.log('father', businessArr.value);
-    
-  }, 2000);
   
 </script>
 
@@ -51,8 +14,9 @@ let businessArr = ref([
     <a href="https://vuejs.org/" target="_blank">
       <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
     </a>
+    <HelloWorld msg="Vite + Vue"  />
   </div>
-  <HelloWorld msg="Vite + Vue" :use-info="useInfo" :str="str" :businessArr="businessArr" />
+  
 </template>
 
 <style scoped>

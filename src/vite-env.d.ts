@@ -6,4 +6,6 @@ declare module '*.vue' {
   export default component
 }
 
+// declare module 'vue-ueditor-wrap'
+
 declare module 'vue-json-editor';
